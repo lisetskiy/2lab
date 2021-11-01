@@ -10,7 +10,7 @@ namespace _3_задание
             int perv = 1;
             int vtor = 1;
             int sum = 0;
-            while(sum < 9999)
+            while(sum <= 9999)
             {
                 sum = perv + vtor;
 
