@@ -17,7 +17,7 @@ namespace _3_задание
                 perv = vtor;
 
                 vtor = sum;
-                if (sum > 1000 & sum< 9999)
+                if (sum => 1000 & sum<= 9999)
                 {
                     Console.Write("{0} ", sum);
                 }              
