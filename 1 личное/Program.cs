@@ -29,7 +29,7 @@ namespace _1_личное
                     // 0 + месяц!
                     Console.Write("Введите год:");
                     int year = Convert.ToInt32(Console.ReadLine());
-                    if (year > 2021)
+                    if (year >= 2021)
                     {
                         Console.WriteLine("Будущее еще не наступило...");
                         return;
@@ -66,7 +66,7 @@ namespace _1_личное
                 {
                     Console.Write("Введите год:");
                     int year = Convert.ToInt32(Console.ReadLine());
-                    if (year > 2021)
+                    if (year >= 2021)
                     {
                         Console.WriteLine("Будущее еще не наступило...");
                         return;
@@ -81,7 +81,7 @@ namespace _1_личное
                     // 0 + месяц!
                     Console.Write("Введите год:");
                     int year = Convert.ToInt32(Console.ReadLine());
-                    if (year > 2021)
+                    if (year >= 2021)
                     {
                         Console.WriteLine("Будущее еще не наступило...");
                         return;
