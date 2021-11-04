@@ -3,31 +3,48 @@
 namespace _5_задание
 {
     class Program
+{
+    static void Main(string[] args)
     {
-       
-        static void Main(string[] args)
+        Console.Write("Введите N>0: ");
+        int N = int.Parse(Console.ReadLine());
+        while (N <= 0)
         {
-            //5 задание
-            Console.Write("N:");
-            int N = Convert.ToInt32(Console.ReadLine());
-            int x, y, z;
-                                     
-            int exam = 0;
-            for (x=0,y=0,z=0; x<=N; x++,y++,z++)
+            Console.Write("Введите N>0: ");
+            N = int.Parse(Console.ReadLine());
+        }
+        var a = new List<int>();
+        var b = new List<int>();
+        var c = new List<int>();
+        double sum;
+        bool flag = false;
+        for (int x = 0; x <= N; x++)
+        {
+            for (int y = 0; y <= N; y++)
             {
-               exam = (int)(Math.Pow(x, 3) + Math.Pow(y, 3) + Math.Pow(y, 3));  
-
-                if (exam == N)
+                for (int z = 0; z <= N; z++)
                 {
-                    Console.Write(" x=" + x + " y=" + y + " z=" + z); 
-                    return;
-                }             
+                    sum = Math.Pow(x, 3) + Math.Pow(y, 3) + Math.Pow(z, 3);
+                    if (sum == N)
+                    {
+                        flag = true;
+                        a.Add(x);
+                        b.Add(y);
+                        c.Add(z);
+                    }
+                }
             }
-             if (exam != N)
-             {
-                Console.WriteLine("«No such combinations!»");
-             }
-            Console.ReadKey();
+        }
+        if (flag)
+            for (int i = 0; i < a.Count; i++)
+            {
+                Console.WriteLine("N = {0}^3 + {1}^3 + {2}^3", a[i], b[i], c[i]);
+            }
+        else
+        {
+            Console.WriteLine("No such combinations!");
         }
     }
+}
+
 }
